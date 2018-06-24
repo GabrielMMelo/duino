@@ -1,6 +1,6 @@
-# Sleeping & Saving Power using watchdog timer
+# Sleeping :zzz: & Saving Power :battery: using watchdog timer
 
-Some Arduino codes examples using `sleep.h` and `wdt.h` libraries
+Some Arduino codes examples using `<avr/sleep.h>` and `<avr/wdt.h>` libraries.
 
 ## Technologies used
 
@@ -24,10 +24,13 @@ In [this](https://github.com/GabrielMMelo/duino/blob/master/Sleep/wdt_sleep/exam
 ### Program flow
 
 1. When MCU <strong>wake up</strong> (including when its boots on first time), the LED blinks RED.
+
 2. So, we delay 2 seconds and reset wdt, configured for 4 seconds timer. While it's <strong>sleeping</strong>, the LED blinks GREEN.
+
 3. Finally, when interrupt rises, we disable wdt and repeat all.
 
-### WDTCSR 
+### WDTCSR - Watchdog register
+
 
 | Bit | Name | Description |
 | --- | --- |--- |
@@ -55,3 +58,4 @@ In [this](https://github.com/GabrielMMelo/duino/blob/master/Sleep/wdt_sleep/exam
 | 1 | 0 | 0 | 0 | 4000 |
 | 1 | 0 | 0 | 1 | 8000 |
 
+\* periods longer than 8 seconds just can be set doing consecutives wdt interrupts 
