@@ -19,4 +19,7 @@ In [this](https://github.com/GabrielMMelo/duino/blob/master/Sleep/wdt_sleep/exam
 
 ![alt text](https://github.com/GabrielMMelo/duino/blob/master/Sleep/wdt_sleep/doc/img/blink.gif "Blinking green while it's sleeping")
 
-When MCU <strong>wake up</strong> (including when its boots on first time), the LED blinks RED. So, we delay 2 seconds and reset wdt, configured for 4 seconds timer. While it's <strong>sleeping</strong>, the LED blinks GREEN. When interrupt rises, we disable wdt and repeat all.
+### Program flow
+
+1. When MCU <strong>wake up</strong> (including when its boots on first time), the LED blinks RED. 
+2. So, we delay 2 seconds and reset wdt, configured for 4 seconds timer. While it's <strong>sleeping</strong>, the LED blinks GREEN. 3. Finally, when interrupt rises, we disable wdt and repeat all.
