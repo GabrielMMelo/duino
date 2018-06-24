@@ -1,4 +1,4 @@
-# Sleeping & Saving Power using watchdog timer (wdt)
+# Sleeping & Saving Power using watchdog timer
 
 Some Arduino codes examples using <i>sleep.h</i> and <i>wdt.h</i> libraries
 
